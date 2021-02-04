@@ -29,6 +29,6 @@ RUN curl -Ls https://github.com/actions/runner/releases/download/v${GITHUB_RUNNE
     && sudo ./bin/installdependencies.sh
 
 COPY --chown=github:github entrypoint.sh ./entrypoint.sh
-RUN sudo chmod u+x ./entrypoint.sh
+RUN sudo chmod 777 ./entrypoint.sh
 
 ENTRYPOINT ["/home/docker/entrypoint.sh"]
