@@ -2,7 +2,7 @@
 FROM ubuntu:18.04
 
 # set the github runner version
-ARG RUNNER_VERSION="2.276.1"
+ARG GITHUB_RUNNER_VERSION="2.276.1"
 
 ENV RUNNER_NAME "runner"
 ENV GITHUB_PAT ""
