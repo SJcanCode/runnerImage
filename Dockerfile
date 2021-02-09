@@ -28,7 +28,7 @@ WORKDIR /home/docker
 RUN curl -Ls https://github.com/actions/runner/releases/download/v${GITHUB_RUNNER_VERSION}/actions-runner-linux-x64-${GITHUB_RUNNER_VERSION}.tar.gz | tar xz \
     && sudo ./bin/installdependencies.sh
 
-COPY --chown=github:github entrypoint.sh ./entrypoint.sh
+COPY entrypoint.sh ./entrypoint.sh
 RUN sudo chmod 777 ./entrypoint.sh
 
 ENTRYPOINT ["/home/docker/entrypoint.sh"]
